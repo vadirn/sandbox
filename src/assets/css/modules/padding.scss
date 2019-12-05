@@ -1,0 +1,33 @@
+@mixin vdrn_padding($prefix, $scope, $unit) {
+  .#{$prefix}p-#{$scope} {
+    padding: $unit;
+  }
+  .#{$prefix}p-#{$scope}-x {
+    padding-left: $unit;
+    padding-right: $unit;
+  }
+  .#{$prefix}p-#{$scope}-y {
+    padding-left: $unit;
+    padding-right: $unit;
+  }
+  .#{$prefix}p-#{$scope}-t {
+    padding-top: $unit;
+  }
+  .#{$prefix}p-#{$scope}-b {
+    padding-bottom: $unit;
+  }
+  .#{$prefix}p-#{$scope}-l {
+    padding-left: $unit;
+  }
+  .#{$prefix}p-#{$scope}-r {
+    padding-right: $unit;
+  }
+}
+
+@include vdrn_padding('', 'u', $u);
+@include vdrn_padding('', 's', $s);
+@include vdrn_padding('', 'm', $m);
+@include vdrn_padding('', 'l', $l);
+@include vdrn_padding('', 'xl', $xl);
+@include vdrn_padding('', 'xxl', $xxl);
+@include vdrn_padding('', '0', 0);

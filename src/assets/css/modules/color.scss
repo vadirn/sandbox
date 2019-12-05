@@ -1,0 +1,37 @@
+@mixin vdrn_color($prefix, $scope, $unit) {
+  .#{$prefix}color-#{$scope} {
+    color: $unit;
+  }
+}
+
+@mixin vdrn_bg($prefix, $scope, $unit) {
+  .#{$prefix}bg-#{$scope} {
+    background-color: $unit;
+  }
+}
+
+@include vdrn_color('', 'neutral-0', $color-neutral-0);
+@include vdrn_color('', 'neutral-1', $color-neutral-1);
+@include vdrn_color('', 'neutral-2', $color-neutral-2);
+@include vdrn_color('', 'neutral-3', $color-neutral-3);
+@include vdrn_color('', 'neutral-4', $color-neutral-4);
+@include vdrn_color('', 'neutral-5', $color-neutral-5);
+
+@include vdrn_color('', 'accent-1-light', $color-accent-1-light);
+@include vdrn_color('', 'accent-1', $color-accent-1);
+@include vdrn_color('', 'accent-1-dark', $color-accent-1-dark);
+
+@include vdrn_color('', 'transparent', transparent);
+
+@include vdrn_bg('', 'neutral-0', $color-neutral-0);
+@include vdrn_bg('', 'neutral-1', $color-neutral-1);
+@include vdrn_bg('', 'neutral-2', $color-neutral-2);
+@include vdrn_bg('', 'neutral-3', $color-neutral-3);
+@include vdrn_bg('', 'neutral-4', $color-neutral-4);
+@include vdrn_bg('', 'neutral-5', $color-neutral-5);
+
+@include vdrn_bg('', 'accent-1-light', $color-accent-1-light);
+@include vdrn_bg('', 'accent-1', $color-accent-1);
+@include vdrn_bg('', 'accent-1-dark', $color-accent-1-dark);
+
+@include vdrn_bg('', 'transparent', transparent);

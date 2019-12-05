@@ -1,0 +1,9 @@
+@mixin vdrn_opacity($prefix, $scope, $unit) {
+  .#{$prefix}opacity-#{$scope} {
+    opacity: $unit;
+  }
+}
+
+@include vdrn_opacity('', '100', 1);
+@include vdrn_opacity('', '50', 0.5);
+@include vdrn_opacity('', '0', 0);

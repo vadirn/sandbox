@@ -1,0 +1,36 @@
+@mixin vdrn_margin($prefix, $scope, $unit) {
+  .#{$prefix}m-#{$scope} {
+    margin: $unit;
+  }
+  .#{$prefix}m-#{$scope}-x {
+    margin-left: $unit;
+    margin-right: $unit;
+  }
+  .#{$prefix}m-#{$scope}-y {
+    margin-left: $unit;
+    margin-right: $unit;
+  }
+  .#{$prefix}m-#{$scope}-t {
+    margin-top: $unit;
+  }
+  .#{$prefix}m-#{$scope}-b {
+    margin-bottom: $unit;
+  }
+  .#{$prefix}m-#{$scope}-l {
+    margin-left: $unit;
+  }
+  .#{$prefix}m-#{$scope}-r {
+    margin-right: $unit;
+  }
+}
+
+@include vdrn_margin('', 'auto', auto);
+@include vdrn_margin('', '0', 0);
+@include vdrn_margin('', 'u', $u);
+@include vdrn_margin('', 's', $s);
+@include vdrn_margin('', 'm', $m);
+@include vdrn_margin('', 'l', $l);
+@include vdrn_margin('', 'xl', $xl);
+@include vdrn_margin('', 'xxl', $xxl);
+
+@include vdrn_margin('n', 'u', -$u);

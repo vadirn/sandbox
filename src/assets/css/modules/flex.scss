@@ -1,0 +1,71 @@
+/* https://github.com/fractures/fractures/blob/master/src/flex.css */
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-ycenter {
+  align-items: center;
+}
+.flex-xcenter {
+  justify-content: center;
+}
+
+.flex-around {
+  justify-content: space-around;
+}
+.flex-between {
+  justify-content: space-between;
+}
+.flex-right {
+  justify-content: flex-end;
+}
+
+.flex-baseline {
+  align-items: baseline;
+}
+.flex-end {
+  align-items: flex-end;
+}
+.flex-start {
+  align-items: flex-start;
+}
+
+/* min-width and min-height is a fix for Chrome 44 bug. https://code.google.com/p/chromium/issues/detail?id=506893 */
+.flex-auto {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+}
+.flex-none {
+  flex: none;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.flex-grow-2 {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.flex-self-center {
+  align-self: center;
+}
+.flex-self-start {
+  align-self: flex-start;
+}
+.flex-self-end {
+  align-self: flex-end;
+}
+.flex-self-baseline {
+  align-self: baseline;
+}

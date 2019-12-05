@@ -1,0 +1,26 @@
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-auto {
+  cursor: auto;
+}
+
+.user-select-none {
+  user-select: none;
+}
+
+.bg-grid {
+  pointer-events: none;
+  background-size: 8px 8px;
+  background-image: linear-gradient(
+      to right,
+      transparent 7px,
+      rgba($color-accent-1, 0.2) 7px
+    ),
+    linear-gradient(to bottom, transparent 7px, rgba($color-accent-1, 0.2) 7px);
+}
+
+.bg-debug {
+  background-color: rgba($color-accent-1, 0.2);
+}

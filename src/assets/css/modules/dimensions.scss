@@ -1,0 +1,29 @@
+@mixin vdrn_width($prefix, $scope, $unit) {
+  .#{$prefix}w-#{$scope} {
+    width: $unit;
+  }
+}
+@mixin vdrn_height($prefix, $scope, $unit) {
+  .#{$prefix}h-#{$scope} {
+    height: $unit;
+  }
+}
+@mixin vdrn_width_height($prefix, $scope, $unit) {
+  @include vdrn_width($prefix, $scope, $unit);
+  @include vdrn_height($prefix, $scope, $unit);
+}
+
+@include vdrn_width_height('', 'u', $u);
+@include vdrn_width_height('', 's', $s);
+@include vdrn_width_height('', 'm', $m);
+@include vdrn_width_height('', 'l', $l);
+@include vdrn_width_height('', 'xl', $xl);
+@include vdrn_width_height('', 'xxl', $xxl);
+@include vdrn_width_height('', '50', 50%);
+@include vdrn_width_height('', '100', 100%);
+
+@include vdrn_width('', 'auto', auto);
+@include vdrn_width('', 'fit', fit-content); // w-fit
+@include vdrn_width('minv', '100', 100vw); // minvw-100
+
+@include vdrn_height('minv', '100', 100vh); // minvh-100

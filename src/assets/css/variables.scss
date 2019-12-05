@@ -1,0 +1,49 @@
+// FONT-FAMILIES
+$ff-body: 'Inter', BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Oxygen,
+  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$ff-heading: 'Inter', BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto,
+  Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$ff-mono: Hack, Consolas, 'Lucida Console', monospace;
+
+// SIZE
+$u: 0.5rem; /* 8 */
+
+$s: 1rem; /* 16 */
+$fs-s: 0.875rem; /* 14 */
+
+$m: 1.5rem; /* 24 */
+$fs-m: 1rem; /* 16 */
+
+$l: 2rem; /* 32 */
+$fs-l: 1.5rem; /* 24 */
+
+$xl: 2.5rem; /* 40 */
+$fs-xl: 2rem; /* 32 */
+
+$xxl: 3rem; /* 48 */
+$fs-xxl: 2.5rem; /* 40 */
+
+/* Colors */
+/* Neutrals: https://www.colorbox.io/#steps=6#hue_start=359#hue_end=359#hue_curve=easeInOutQuad#sat_start=0#sat_end=0#sat_curve=easeInOutQuad#sat_rate=130#lum_start=100#lum_end=16#lum_curve=easeOutQuad */
+$color-neutral-0: rgba(255, 255, 255, 1);
+$color-neutral-1: rgba(245, 245, 245, 1);
+$color-neutral-2: rgba(223, 223, 223, 1);
+$color-neutral-3: rgba(183, 183, 183, 1);
+$color-neutral-4: rgba(120, 120, 120, 1);
+$color-neutral-5: rgba(41, 41, 41, 1);
+
+/* Accent-1: https://www.colorbox.io/#steps=3#hue_start=4#hue_end=4#hue_curve=easeOutQuad#sat_start=50#sat_end=100#sat_curve=easeOutQuad#sat_rate=130#lum_start=100#lum_end=80#lum_curve=easeOutQuad */
+$color-accent-1-light: rgba(255, 100, 89, 1);
+$color-accent-1: rgba(243, 16, 0, 1);
+$color-accent-1-dark: rgba(204, 14, 0, 1);
+
+/* Border radii */
+$radius-pill: 9999em;
+$radius-circle: 50%;
+
+/* break-points */
+$bp-1: 320px;
+$bp-2: 425px;
+$bp-3: 768px;
+$bp-4: 1024px;
+$bp-5: 1440px;

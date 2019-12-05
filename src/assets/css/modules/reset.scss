@@ -1,0 +1,22 @@
+html {
+  line-height: 1.15;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  color: $color-neutral-5;
+  font-size: $fs-m;
+  font-family: $ff-body;
+  line-height: $m;
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+img {
+  object-fit: cover;
+  max-width: 100%;
+}

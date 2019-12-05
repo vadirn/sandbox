@@ -1,0 +1,17 @@
+@mixin vdrn_width($prefix, $scope, $unit) {
+  .#{$prefix}w-#{$scope} {
+    width: $unit;
+  }
+}
+
+@include vdrn_width('', 'fit', fit-content);
+@include vdrn_width('', 'u', $u);
+@include vdrn_width('', 's', $s);
+@include vdrn_width('', 'm', $m);
+@include vdrn_width('', 'l', $l);
+@include vdrn_width('', 'xl', $xl);
+@include vdrn_width('', 'xxl', $xxl);
+
+@include vdrn_width('', '100', 100%); // w-100
+
+@include vdrn_width('minv', '100', 100vw); // minvw-100

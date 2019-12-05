@@ -1,0 +1,200 @@
+h1,
+h2,
+h3,
+h4 {
+  font-size: inherit;
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: inherit;
+}
+
+ul,
+p,
+ol,
+pre {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.ff-body {
+  font-family: $ff-body;
+}
+
+.ff-heading {
+  font-family: $ff-heading;
+}
+
+.ff-mono {
+  font-family: $ff-mono;
+}
+
+.text-title {
+  font-family: $ff-heading;
+  font-size: $fs-xxl;
+  line-height: $xxl;
+}
+
+.text-heading {
+  font-family: $ff-heading;
+  font-size: $fs-xl;
+  line-height: $xl;
+}
+
+.text-body-2 {
+  font-size: $fs-l;
+  line-height: $l;
+}
+
+.text-body-1 {
+  font-size: $fs-m;
+  line-height: $m;
+}
+
+.text-caption {
+  font-size: $fs-s;
+  line-height: $s;
+}
+
+.text-caps {
+  font-size: $fs-s;
+  line-height: $m;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.text-0 {
+  font-size: 0;
+}
+
+.lh-xl {
+  line-height: $xl;
+}
+.lh-l {
+  line-height: $l;
+}
+.lh-m {
+  line-height: $m;
+}
+.lh-s {
+  line-height: $s;
+}
+
+.text-light {
+  font-weight: 300;
+}
+.text-medium {
+  font-weight: 500;
+}
+.text-bold {
+  font-weight: 700;
+}
+.text-black {
+  font-weight: 900;
+}
+.text-regular {
+  font-weight: normal;
+}
+.text-italic {
+  font-style: italic;
+}
+.text-normal {
+  font-style: normal;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+}
+.text-overline {
+  text-decoration: overline;
+}
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+.text-lowercase {
+  text-transform: lowercase;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-pre {
+  white-space: pre;
+}
+.text-pre-line {
+  white-space: pre-line;
+}
+.text-pre-wrap {
+  white-space: pre-wrap;
+}
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-break {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.text-truncate {
+  overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-valign-top {
+  vertical-align: top;
+}
+.text-valign-middle {
+  vertical-align: middle;
+}
+.text-valign-bottom {
+  vertical-align: bottom;
+}
+
+.text-numeric {
+  font-variant-numeric: tabular-nums;
+}
+
+.text-reset {
+  letter-spacing: initial;
+  text-transform: initial;
+  font-weight: initial;
+}
+
+.list-dash {
+  margin-left: $l;
+}
+.list-dash li:before {
+  content: '\2014';
+  position: absolute;
+  margin-left: -$l;
+}

@@ -1,6 +1,7 @@
-import { combineRoutes, route } from './helpers';
+import { combineRoutes } from './helpers';
 
 export const routes = combineRoutes(
-  route('/', () => {}),
-  route(['/playground', '/playground/:component'], () => {})
+  ['index', '/'],
+  ['playground', '/playground'],
+  ['playground-component', '/playground/:component']
 );

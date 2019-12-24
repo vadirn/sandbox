@@ -110,18 +110,12 @@ export function serializePath(path, routestring) {
   return returnValue;
 }
 
-export function route(routes, handler) {
-  const returnValue = {};
-  if (Array.isArray(routes)) {
-    routes.forEach(r => Object.assign(returnValue, { [r]: handler }));
-  } else {
-    Object.assign(returnValue, { [routes]: handler });
+export function combineRoutes(...routeTupleArray) {
+  const routes = {};
+  const names = {};
+  for (const [name, route] of routeTupleArray) {
+    routes[route] = name;
+    names[name] = route;
   }
-  return returnValue;
-}
-
-export function combineRoutes(...routeArray) {
-  const returnValue = {};
-  routeArray.forEach(r => Object.assign(returnValue, r));
-  return returnValue;
+  return { routes, names };
 }

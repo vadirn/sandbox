@@ -1,5 +1,6 @@
 <script>
-  export let component;
+  export let component = null;
+  export let props = {};
 </script>
 
-<svelte:component this={$component} />
+<svelte:component this={component} {...props} />

@@ -1,10 +1,14 @@
 import 'assets/css/global.scss';
+import { location } from 'session/router';
 import Layer from 'ui/helpers/layer.svelte';
-import { page } from 'ui/helpers/page';
-import { modal } from 'ui/helpers/modal';
-import { float } from 'ui/helpers/float';
-import 'session/router';
+import { page, showPage } from 'ui/helpers/page';
 
-new Layer({ target: document.body, props: { component: page } });
-new Layer({ target: document.body, props: { component: modal } });
-new Layer({ target: document.body, props: { component: float } });
+const pageLayer = new Layer({ target: document.body });
+
+page.subscribe(([component, props]) => pageLayer.$set({ component, props }));
+
+location.subscribe(locationData => {
+  if (locationData) {
+    showPage(locationData.name, { locationData });
+  }
+});

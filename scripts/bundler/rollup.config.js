@@ -1,14 +1,15 @@
-const { resolve, isProduction, isDevelopment, mode } = require('./env');
+const { resolve, is_production, is_development, mode } = require('./env');
 const replace = require('rollup-plugin-replace');
 const alias = require('./rollup-plugin-alias');
 const assets = require('./rollup-plugin-assets');
 const scss = require('./rollup-plugin-scss');
 const svelte = require('rollup-plugin-svelte');
 const babel = require('rollup-plugin-babel');
-const nodeResolve = require('rollup-plugin-node-resolve');
+const node_resolve = require('rollup-plugin-node-resolve');
 const commonjs = require('rollup-plugin-commonjs');
 const livereload = require('rollup-plugin-livereload');
 const { terser } = require('rollup-plugin-terser');
+const svelte_preprocess_babel = require('./svelte-preprocess-babel');
 
 exports.input = {
   input: resolve('src', 'main.js'),
@@ -39,6 +40,11 @@ exports.input = {
     svelte({
       dev: mode === 'development',
       emitCss: true,
+      preprocess: {
+        script: ({ content }) => {
+          return svelte_preprocess_babel(content);
+        },
+      },
     }),
     babel({
       exclude: /(src?!\/)node_modules(?!\/svelte)/,
@@ -69,16 +75,16 @@ exports.input = {
         '@babel/plugin-proposal-nullish-coalescing-operator',
       ],
     }),
-    nodeResolve({ browser: true }),
+    node_resolve({ browser: true }),
     commonjs(),
-    isDevelopment && livereload({ watch: resolve('dist') }),
-    isProduction && terser(),
+    is_development && livereload({ watch: resolve('dist') }),
+    is_production && terser(),
   ],
 };
 
 exports.output = {
   dir: resolve('dist', 'assets'),
   format: 'system',
-  entryFileNames: (isProduction && '[name].[hash].js') || '[name].js',
-  chunkFileNames: (isProduction && '[name].[hash].js') || '[name].js',
+  entryFileNames: (is_production && '[name].[hash].js') || '[name].js',
+  chunkFileNames: (is_production && '[name].[hash].js') || '[name].js',
 };

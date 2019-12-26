@@ -9,5 +9,5 @@ const mode = (args.includes('--production') && 'production') || 'development';
 
 exports.watch = watch;
 exports.mode = mode;
-exports.isProduction = mode === 'production';
-exports.isDevelopment = mode === 'development';
+exports.is_production = mode === 'production';
+exports.is_development = mode === 'development';

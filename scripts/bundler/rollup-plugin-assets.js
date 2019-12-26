@@ -14,11 +14,11 @@ module.exports = () => {
     },
     load(id) {
       if (filter(id)) {
-        const assetReferenceId = this.emitAsset(
+        const asset_reference_id = this.emitAsset(
           path.basename(id),
           fs.readFileSync(id)
         );
-        return `export default import.meta.ROLLUP_ASSET_URL_${assetReferenceId};`;
+        return `export default import.meta.ROLLUP_ASSET_URL_${asset_reference_id};`;
       }
     },
   };

@@ -66,16 +66,18 @@ async function main() {
       output,
     });
     watcher.on('event', event => {
-      (({
-        START: () => console.log('Building...'),
-        END: () => console.log('Finished building...'),
-        ERROR: () => console.log('Error', { event }),
-        FATAL: () => {
-          console.log('Fatal error', { event });
-          watcher.close();
-          process.exit(-1);
-        },
-      }[event.code] || (() => {}))());
+      ((
+        {
+          START: () => console.log('Building...'),
+          END: () => console.log('Finished building...'),
+          ERROR: () => console.log('Error', { event }),
+          FATAL: () => {
+            console.log('Fatal error', { event });
+            watcher.close();
+            process.exit(-1);
+          },
+        }[event.code] || (() => {})
+      )());
     });
     writeTemplates({ ...assets, 'main.js': 'main.js', 'main.css': 'main.css' });
   } else {
